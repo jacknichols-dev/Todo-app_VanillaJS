@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: poppins, sans-serif;
+  background: linear-gradient(
+    to top right,
+    rgb(151, 197, 186) 40%,
+    rgb(176, 243, 212)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: darkslategray;
+}
+
+header {
+  font-size: 1.4rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  border: none;
+  font-size: 2rem;
+  box-shadow: 0.5rem 1rem 10rem rgba(0, 0, 0, 0.1);
+  outline: none;
+  border: none;
+}
+
+form button {
+  color: sandybrown;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: sandybrown;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  list-style: none;
+  min-width: 30%;
+  margin: 0;
+  padding: 0;
+}
+
+.todo {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  margin: 0.5rem;
+  padding-left: 1rem;
+  background: white;
+  border: 1px solid teal;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  box-shadow: 0rem 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+form input:hover {
+  box-shadow: 0rem 0.6rem 1rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.comp-btn,
+.del-btn {
+  font-size: 1.5rem;
+  padding: 1rem;
+  background: rgb(240, 119, 49);
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.del-btn {
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.del-btn:hover {
+  background: orangered;
+}
+
+.comp-btn:hover {
+  background: green;
+}
+
+.comp-btn {
+  margin-left: 3rem;
+  background: lightgreen;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.todo-input {
+  padding-left: 1.8rem;
+  font-weight: 600;
+  color: darkslategray;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.comp {
+  text-decoration-line: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(5rem) rotateZ(10deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: sandybrown;
+  width: 15rem;
+  cursor: pointer;
+  background: white;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select:hover {
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.select::after {
+  content: '\25BE';
+  color: sandybrown;
+  position: absolute;
+  font-size: 1.6rem;
+  background: white;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: sandybrown;
+  color: white;
+}
